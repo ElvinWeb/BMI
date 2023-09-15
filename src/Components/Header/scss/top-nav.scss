@@ -1,0 +1,118 @@
+.top-nav {
+    width: 100%;
+    padding: 15px 0;
+    @include flex-between;
+
+    .header-logo {
+        @include flex-center;
+
+        .logo {
+            width: 100%;
+            max-width: 350px;
+            object-fit: cover;
+
+            @media only screen and (min-width: 1400px) {
+                max-width: 400px;
+            }
+        }
+    }
+
+    .top-nav-right {
+        @include flex-column;
+        padding: 15px 0px;
+
+        .contact-links {
+            @include flex-between;
+            padding: 15px 0px;
+
+            .social-links {
+                @include flex-center;
+                border-right: 1px solid $border-color;
+
+                a {
+                    width: 30px;
+                    height: 30px;
+                    @include flex-center;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    margin-right: 10px;
+                    color: $icon-color;
+                }
+            }
+
+            .contact {
+                @include flex-center;
+                border-right: 1px solid $border-color;
+                padding: 0 10px;
+
+                a {
+                    @include flex-center;
+
+                    span:first-child {
+                        font-size: 18px;
+                        color: $icon-color;
+                        padding: 0px 8px;
+                    }
+
+                    span:last-child {
+                        color: $text-color;
+                    }
+                }
+
+            }
+
+
+        }
+
+        .search-bar {
+            @include flex-center;
+            justify-content: flex-end;
+            padding: 15px 0px;
+
+            .lang-dropdown {
+                margin-right: 15px;
+
+                .toggle {
+                    background: transparent;
+                    @include flex-center;
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $icon-color;
+                        padding: 0 5px;
+                    }
+
+                }
+            }
+
+            .search-box {
+                position: relative;
+                min-width: 300px;
+
+                .search-field {
+                    width: 100%;
+                    border: 1px solid $input-border;
+                    background-color: $bg-color-input;
+                    padding: 10px;
+                    border-radius: 5px;
+                    padding-right: 35px;
+
+                    &:focus {
+                        border-color: $black-color-5;
+                    }
+                }
+
+                .search-btn {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-right: 12px;
+                    font-size: 18px;
+                    color: $black-color-5;
+                }
+            }
+        }
+    }
+}

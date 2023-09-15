@@ -1,0 +1,11 @@
+@import "../scss/top-nav.scss";
+@import "../scss/bottom-nav.scss";
+
+.header {
+    padding: 10px 0px;
+
+    .general-nav {
+        width: 100%;
+        background-color: $color-white;
+    }
+}
